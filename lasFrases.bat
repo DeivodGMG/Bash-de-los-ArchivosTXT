@@ -1,11 +1,8 @@
 #!/bin/bash
-
 # Crear la carpeta Main
 mkdir -p Main
-
 # Crear archivos dentro de Main
 touch Main/Personajes Main/Objetos Main/Acciones Main/Lugares Main/Frases_Chidas
-
 # Llenar el archivo Personajes
 cat <<EOT > Main/Personajes
 Pedrucas
@@ -109,7 +106,6 @@ Un tololoche
 Un vendedor de elotes
 Panfilo Filomeno
 EOT
-
 # Llenar el archivo Objetos
 cat <<EOT > Main/Objetos
 Maceta
@@ -213,7 +209,6 @@ PISTOLA
 BALON
 HIELOS
 EOT
-
 # Llenar el archivo Acciones
 cat <<EOT > Main/Acciones
 Corrió
@@ -260,7 +255,6 @@ Temió
 Olvidó
 Recordó
 EOT
-
 # Llenar el archivo Lugares
 cat <<EOT > Main/Lugares
 Cinépolis
@@ -369,4 +363,7 @@ objeto=$(shuf -n 1 Main/Objetos)
 accion=$(shuf -n 1 Main/Acciones)
 lugar=$(shuf -n 1 Main/Lugares)
 # Guardar la frase en Frases_Chidas
-echo "$personaje $accion un(a) $objeto en $lugar" > Main/Frases_Chidas
+@echo off
+for /l %%i in (1,1,202) do (
+    echo "$personaje $accion un(a) $objeto en $lugar" > Main/Frases_Chidas
+)
