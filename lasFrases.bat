@@ -1,6 +1,6 @@
 #!/bin/bash
 # Crear la carpeta Main
-mkdir -p Main
+mkdir Main
 # Crear archivos dentro de Main
 touch Main/Personajes Main/Objetos Main/Acciones Main/Lugares Main/Frases_Chidas
 # Llenar el archivo Personajes
